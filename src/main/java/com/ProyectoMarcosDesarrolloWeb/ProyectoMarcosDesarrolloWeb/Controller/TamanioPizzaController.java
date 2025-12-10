@@ -4,6 +4,7 @@ import com.ProyectoMarcosDesarrolloWeb.ProyectoMarcosDesarrolloWeb.Service.Taman
 import com.ProyectoMarcosDesarrolloWeb.ProyectoMarcosDesarrolloWeb.dto.TamanioPizzaDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 // El frontend lo llamará con: http://localhost:8080/api/tamanios
 @PreAuthorize("hasAnyAuthority('ADMIN', 'Cliente')")
 @RequestMapping("/api/tamanios")
+@CrossOrigin(origins = "*")
 public class TamanioPizzaController {
 
     @Autowired

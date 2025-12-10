@@ -13,6 +13,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 @RestController
 @PreAuthorize("hasAnyAuthority('ADMIN', 'Cliente')")
 @RequestMapping("/api/carrito")
+@CrossOrigin(origins = "*")
 public class CarritoController {
 
     @Autowired

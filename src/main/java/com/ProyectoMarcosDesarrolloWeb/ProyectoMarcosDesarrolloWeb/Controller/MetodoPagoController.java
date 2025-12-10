@@ -10,6 +10,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 @RestController
 @RequestMapping("/api/metodos-pago")
+@CrossOrigin(origins = "*")
 public class MetodoPagoController {
 
     @Autowired

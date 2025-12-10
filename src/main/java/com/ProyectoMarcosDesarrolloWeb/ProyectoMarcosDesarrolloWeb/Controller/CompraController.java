@@ -17,6 +17,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 @RestController
 @PreAuthorize("hasAnyAuthority('ADMIN', 'Cliente')")
 @RequestMapping("/api/compras")
+@CrossOrigin(origins = "*")
 public class CompraController {
 
     @Autowired

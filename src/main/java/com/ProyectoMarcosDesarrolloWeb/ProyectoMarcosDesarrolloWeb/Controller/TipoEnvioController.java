@@ -10,6 +10,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 @RestController
 @RequestMapping("/api/tipos-envio")
+@CrossOrigin(origins = "*")
 public class TipoEnvioController {
 
     @Autowired

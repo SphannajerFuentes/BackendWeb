@@ -12,6 +12,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 @RestController
 @RequestMapping("/api/roles")
+@CrossOrigin(origins = "*")
 public class RolController {
 
     private final RolRepository rolRepository;
