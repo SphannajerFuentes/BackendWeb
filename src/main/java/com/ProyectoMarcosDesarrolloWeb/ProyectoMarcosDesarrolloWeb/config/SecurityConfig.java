@@ -69,15 +69,14 @@ public class SecurityConfig {
 public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration config = new CorsConfiguration();
     
-    
-    config.setAllowedOrigins(List.of("https://courageous-licorice-cb3d5e.netlify.app/")); 
-    
+    // Al importar java.util.List, estas líneas dejarán de dar error:
+    config.setAllowedOrigins(List.of("https://deluxe-crostata-b43866.netlify.app")); 
     config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
     config.setAllowedHeaders(List.of("Authorization", "Content-Type", "Cache-Control"));
-    config.setAllowCredentials(true); 
+    config.setAllowCredentials(true);
 
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     source.registerCorsConfiguration("/**", config);
     return source;
-    }
+}
 }
